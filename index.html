@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 400px;
+            padding: 20px;
+            margin: 50px auto;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+        }
+
+        .container .showArea {
+            height: 30px;
+        }
+
+        .container .showArea input {
+            text-align: right;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #f2f2f2;
+            border-radius: 5px;
+        }
+
+        .container .showArea input:focus {
+            border: none;
+            outline: none;
+        }
+
+        .container .btnArea {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .container .btnArea .group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container .btnArea .group:not(:first-child){
+            margin-top: 20px;
+        }
+        .container .btnArea .group button {
+            width: 50px;
+            height: 50px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            color: rgba(0, 0, 0, .65);
+            font-size: 16px;
+        }
+
+        .container .btnArea .group button:focus {
+            outline: none;
+        }
+
+        .container .btnArea .group button:active {
+            background-color: cornflowerblue;
+        }
+
+        .container .btnArea .group .zero {
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="showArea">
+        <input id="input" value="0" type="text">
+    </div>
+    <div class="btnArea">
+        <div class="group">
+            <button id="AC" onclick="AC1()">AC</button>
+            <button id="posAndNeg" onclick="posAndNeg1()">+/-</button>
+            <button id="percent" onclick="prefent1()">%</button>
+            <button id="chu" onclick="chu1()">/</button>
+        </div>
+        <div class="group">
+            <button id="seven" onclick="seven1()">7</button>
+            <button id="eight" onclick="eight1()">8</button>
+            <button id="nine" onclick="nine1()">9</button>
+            <button id="cheng" onclick="cheng1()">*</button>
+        </div>
+        <div class="group">
+            <button id="four" onclick="four1()">4</button>
+            <button id="five" onclick="five1()">5</button>
+            <button id="six" onclick="six1()">6</button>
+            <button id="jian" onclick="jian1()">-</button>
+        </div>
+        <div class="group">
+            <button id="one" onclick="one1()">1</button>
+            <button id="two" onclick="two1()">2</button>
+            <button id="three" onclick="three1()">3</button>
+            <button id="jia" onclick="jia1()">+</button>
+        </div>
+        <div class="group">
+            <button class="zero" id="zero" onclick="zero1()">0</button>
+            <button id="dian" onclick="dian1()">.</button>
+            <button id="deng" onclick="deng1()">=</button>
+        </div>
+    </div>
+</div>
+<script>
+    let one = document.getElementById('one');
+    let two = document.getElementById('two');
+    let three = document.getElementById('three');
+    let four = document.getElementById('four');
+    let five = document.getElementById('five');
+    let six = document.getElementById('six');
+    let seven = document.getElementById('seven');
+    let eight = document.getElementById('eight');
+    let nine = document.getElementById('nine');
+    let zero = document.getElementById('zero');
+    let dian = document.getElementById('dian');
+
+    let AC = document.getElementById('AC');
+    let posAndNeg = document.getElementById('posAndNeg');
+    let percent = document.getElementById('percent');
+    let chu = document.getElementById('chu');
+    let cheng = document.getElementById('cheng');
+    let jian = document.getElementById('jian');
+    let jia = document.getElementById('jia');
+    let deng = document.getElementById('deng');
+    let input = document.getElementById('input');
+
+    function one1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '1'
+    }
+    function two1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '2'
+    }
+    function three1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '3'
+    }
+    function four1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '4'
+    }
+    function five1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '5'
+    }
+    function six1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '6'
+    }
+    function seven1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '7'
+    }
+    function eight1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '8'
+    }
+    function nine1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '9'
+    }
+    function zero1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '0'
+    }
+    function nine1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '1'
+    }
+    function AC1() {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = '0'
+    }
+    function jia1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '+'
+    }
+    function jian1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '-'
+    }
+    function cheng1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '*'
+    }
+    function chu1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        input.value = input.value + '/'
+    }
+    function posAndNeg1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        const  reg = /([+-]?\d+)$/g
+        let str = reg.exec(input.value)[0]
+        const reg2 = new RegExp(str)
+        if(Number(str)>0) {
+            input.value = input.value.replace(reg2, '')
+            input.value = input.value + '-' + str
+        }else if(Number(str)<0) {
+            input.value = input.value.replace(reg2, '')
+            str = str.replace(/-/, '')
+            input.value =  input.value + str
+        }
+    }
+
+    function dian1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        const  reg = /(\d)+$/g
+        let str = reg.exec(input.value)[0]
+        const reg2 = new RegExp(str)
+            input.value = input.value.replace(reg2, '')
+            input.value = input.value + str + '.'
+    }
+
+    function prefent1 () {
+        if(input.value === '0') {
+            input.value = ''
+        }
+        const  reg = /(\d*\.?\d)+$/g
+        let str = reg.exec(input.value)[0]
+        const reg2 = new RegExp(str)
+        input.value = input.value.replace(reg2, '')
+        str = (Number(str)/100)
+        console.log(str)
+        input.value = input.value + str
+    }
+
+    function  deng1() {
+        input.value = eval(input.value)
+    }
+
+
+
+
+</script>
+</body>
+</html>
